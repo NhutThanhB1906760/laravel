@@ -37,3 +37,11 @@ Route::prefix('users')->name('user.')->group(function () {
         return '12';
     })->name('setting');
 });
+
+Route::get('/name', function () {
+    return '2adad';
+})->name('names');
+
+Route::get('/zz', function () {
+    return redirect()->route('names');
+});
